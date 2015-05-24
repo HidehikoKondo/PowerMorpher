@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -41,5 +42,26 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+-(void)application:(UIApplication *)application handleWatchKitExtensionRequest:(NSDictionary *)userInfo reply:(void (^)(NSDictionary *))reply{
+    NSString *str = [userInfo objectForKey:@"FromWatchApp"];
+    NSLog(@"Recieve:%@",str);
+    
+    //Viewcontrollerを取得して音声再生
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    if (window == nil) {
+        window = [[UIApplication sharedApplication].windows objectAtIndex:0];
+    }
+    
+    ViewController *viewController = window.rootViewController;
+    [viewController voice];
+    
+    
+    NSDictionary *applicationData = @{@"FromWatchApp":[NSString stringWithFormat:@"fromApp%@",str]};
+    reply(applicationData);
+}
+
+
 
 @end
