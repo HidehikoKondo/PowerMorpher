@@ -1,0 +1,690 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		06CB33D81B117FA600FB7119 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB33D71B117FA600FB7119 /* main.m */; };
+		06CB33DB1B117FA600FB7119 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB33DA1B117FA600FB7119 /* AppDelegate.m */; };
+		06CB33DE1B117FA600FB7119 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB33DD1B117FA600FB7119 /* ViewController.m */; };
+		06CB33E11B117FA600FB7119 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06CB33DF1B117FA600FB7119 /* Main.storyboard */; };
+		06CB33E31B117FA600FB7119 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06CB33E21B117FA600FB7119 /* Images.xcassets */; };
+		06CB33E61B117FA600FB7119 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06CB33E41B117FA600FB7119 /* LaunchScreen.xib */; };
+		06CB33F21B117FA600FB7119 /* PowerMorpherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB33F11B117FA600FB7119 /* PowerMorpherTests.m */; };
+		06CB34051B11802100FB7119 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB34041B11802100FB7119 /* InterfaceController.m */; };
+		06CB34071B11802100FB7119 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06CB34061B11802100FB7119 /* Images.xcassets */; };
+		06CB340B1B11802100FB7119 /* PowerMorpher WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 06CB340A1B11802100FB7119 /* PowerMorpher WatchKit App.app */; };
+		06CB34131B11802100FB7119 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06CB34111B11802100FB7119 /* Interface.storyboard */; };
+		06CB34151B11802100FB7119 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06CB34141B11802100FB7119 /* Images.xcassets */; };
+		06CB34181B11802100FB7119 /* PowerMorpher WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 06CB33FF1B11802100FB7119 /* PowerMorpher WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		06CB33EC1B117FA600FB7119 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06CB33CA1B117FA600FB7119 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06CB33D11B117FA600FB7119;
+			remoteInfo = PowerMorpher;
+		};
+		06CB340C1B11802100FB7119 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06CB33CA1B117FA600FB7119 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06CB34091B11802100FB7119;
+			remoteInfo = "PowerMorpher WatchKit App";
+		};
+		06CB34161B11802100FB7119 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06CB33CA1B117FA600FB7119 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06CB33FE1B11802100FB7119;
+			remoteInfo = "PowerMorpher WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		06CB341F1B11802100FB7119 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				06CB34181B11802100FB7119 /* PowerMorpher WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		06CB33D21B117FA600FB7119 /* PowerMorpher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PowerMorpher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		06CB33D61B117FA600FB7119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06CB33D71B117FA600FB7119 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		06CB33D91B117FA600FB7119 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		06CB33DA1B117FA600FB7119 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		06CB33DC1B117FA600FB7119 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		06CB33DD1B117FA600FB7119 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		06CB33E01B117FA600FB7119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		06CB33E21B117FA600FB7119 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		06CB33E51B117FA600FB7119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		06CB33EB1B117FA600FB7119 /* PowerMorpherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PowerMorpherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		06CB33F01B117FA600FB7119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06CB33F11B117FA600FB7119 /* PowerMorpherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PowerMorpherTests.m; sourceTree = "<group>"; };
+		06CB33FF1B11802100FB7119 /* PowerMorpher WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PowerMorpher WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		06CB34021B11802100FB7119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06CB34031B11802100FB7119 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		06CB34041B11802100FB7119 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		06CB34061B11802100FB7119 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		06CB340A1B11802100FB7119 /* PowerMorpher WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PowerMorpher WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		06CB34101B11802100FB7119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06CB34121B11802100FB7119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		06CB34141B11802100FB7119 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		06CB33CF1B117FA600FB7119 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06CB33E81B117FA600FB7119 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06CB33FC1B11802100FB7119 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06CB33C91B117FA600FB7119 = {
+			isa = PBXGroup;
+			children = (
+				06CB33D41B117FA600FB7119 /* PowerMorpher */,
+				06CB33EE1B117FA600FB7119 /* PowerMorpherTests */,
+				06CB34001B11802100FB7119 /* PowerMorpher WatchKit Extension */,
+				06CB340E1B11802100FB7119 /* PowerMorpher WatchKit App */,
+				06CB33D31B117FA600FB7119 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		06CB33D31B117FA600FB7119 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				06CB33D21B117FA600FB7119 /* PowerMorpher.app */,
+				06CB33EB1B117FA600FB7119 /* PowerMorpherTests.xctest */,
+				06CB33FF1B11802100FB7119 /* PowerMorpher WatchKit Extension.appex */,
+				06CB340A1B11802100FB7119 /* PowerMorpher WatchKit App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		06CB33D41B117FA600FB7119 /* PowerMorpher */ = {
+			isa = PBXGroup;
+			children = (
+				06CB33D91B117FA600FB7119 /* AppDelegate.h */,
+				06CB33DA1B117FA600FB7119 /* AppDelegate.m */,
+				06CB33DC1B117FA600FB7119 /* ViewController.h */,
+				06CB33DD1B117FA600FB7119 /* ViewController.m */,
+				06CB33DF1B117FA600FB7119 /* Main.storyboard */,
+				06CB33E21B117FA600FB7119 /* Images.xcassets */,
+				06CB33E41B117FA600FB7119 /* LaunchScreen.xib */,
+				06CB33D51B117FA600FB7119 /* Supporting Files */,
+			);
+			path = PowerMorpher;
+			sourceTree = "<group>";
+		};
+		06CB33D51B117FA600FB7119 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				06CB33D61B117FA600FB7119 /* Info.plist */,
+				06CB33D71B117FA600FB7119 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		06CB33EE1B117FA600FB7119 /* PowerMorpherTests */ = {
+			isa = PBXGroup;
+			children = (
+				06CB33F11B117FA600FB7119 /* PowerMorpherTests.m */,
+				06CB33EF1B117FA600FB7119 /* Supporting Files */,
+			);
+			path = PowerMorpherTests;
+			sourceTree = "<group>";
+		};
+		06CB33EF1B117FA600FB7119 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				06CB33F01B117FA600FB7119 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		06CB34001B11802100FB7119 /* PowerMorpher WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				06CB34031B11802100FB7119 /* InterfaceController.h */,
+				06CB34041B11802100FB7119 /* InterfaceController.m */,
+				06CB34061B11802100FB7119 /* Images.xcassets */,
+				06CB34011B11802100FB7119 /* Supporting Files */,
+			);
+			path = "PowerMorpher WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		06CB34011B11802100FB7119 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				06CB34021B11802100FB7119 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		06CB340E1B11802100FB7119 /* PowerMorpher WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				06CB34111B11802100FB7119 /* Interface.storyboard */,
+				06CB34141B11802100FB7119 /* Images.xcassets */,
+				06CB340F1B11802100FB7119 /* Supporting Files */,
+			);
+			path = "PowerMorpher WatchKit App";
+			sourceTree = "<group>";
+		};
+		06CB340F1B11802100FB7119 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				06CB34101B11802100FB7119 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		06CB33D11B117FA600FB7119 /* PowerMorpher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06CB33F51B117FA600FB7119 /* Build configuration list for PBXNativeTarget "PowerMorpher" */;
+			buildPhases = (
+				06CB33CE1B117FA600FB7119 /* Sources */,
+				06CB33CF1B117FA600FB7119 /* Frameworks */,
+				06CB33D01B117FA600FB7119 /* Resources */,
+				06CB341F1B11802100FB7119 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				06CB34171B11802100FB7119 /* PBXTargetDependency */,
+			);
+			name = PowerMorpher;
+			productName = PowerMorpher;
+			productReference = 06CB33D21B117FA600FB7119 /* PowerMorpher.app */;
+			productType = "com.apple.product-type.application";
+		};
+		06CB33EA1B117FA600FB7119 /* PowerMorpherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06CB33F81B117FA600FB7119 /* Build configuration list for PBXNativeTarget "PowerMorpherTests" */;
+			buildPhases = (
+				06CB33E71B117FA600FB7119 /* Sources */,
+				06CB33E81B117FA600FB7119 /* Frameworks */,
+				06CB33E91B117FA600FB7119 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				06CB33ED1B117FA600FB7119 /* PBXTargetDependency */,
+			);
+			name = PowerMorpherTests;
+			productName = PowerMorpherTests;
+			productReference = 06CB33EB1B117FA600FB7119 /* PowerMorpherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		06CB33FE1B11802100FB7119 /* PowerMorpher WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06CB341C1B11802100FB7119 /* Build configuration list for PBXNativeTarget "PowerMorpher WatchKit Extension" */;
+			buildPhases = (
+				06CB33FB1B11802100FB7119 /* Sources */,
+				06CB33FC1B11802100FB7119 /* Frameworks */,
+				06CB33FD1B11802100FB7119 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				06CB340D1B11802100FB7119 /* PBXTargetDependency */,
+			);
+			name = "PowerMorpher WatchKit Extension";
+			productName = "PowerMorpher WatchKit Extension";
+			productReference = 06CB33FF1B11802100FB7119 /* PowerMorpher WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		06CB34091B11802100FB7119 /* PowerMorpher WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06CB34191B11802100FB7119 /* Build configuration list for PBXNativeTarget "PowerMorpher WatchKit App" */;
+			buildPhases = (
+				06CB34081B11802100FB7119 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PowerMorpher WatchKit App";
+			productName = "PowerMorpher WatchKit App";
+			productReference = 06CB340A1B11802100FB7119 /* PowerMorpher WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		06CB33CA1B117FA600FB7119 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = UDONKONET;
+				TargetAttributes = {
+					06CB33D11B117FA600FB7119 = {
+						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 7JKB5AMAKP;
+					};
+					06CB33EA1B117FA600FB7119 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 06CB33D11B117FA600FB7119;
+					};
+					06CB33FE1B11802100FB7119 = {
+						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 7JKB5AMAKP;
+					};
+					06CB34091B11802100FB7119 = {
+						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 7JKB5AMAKP;
+					};
+				};
+			};
+			buildConfigurationList = 06CB33CD1B117FA600FB7119 /* Build configuration list for PBXProject "PowerMorpher" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 06CB33C91B117FA600FB7119;
+			productRefGroup = 06CB33D31B117FA600FB7119 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				06CB33D11B117FA600FB7119 /* PowerMorpher */,
+				06CB33EA1B117FA600FB7119 /* PowerMorpherTests */,
+				06CB33FE1B11802100FB7119 /* PowerMorpher WatchKit Extension */,
+				06CB34091B11802100FB7119 /* PowerMorpher WatchKit App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		06CB33D01B117FA600FB7119 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06CB33E11B117FA600FB7119 /* Main.storyboard in Resources */,
+				06CB33E61B117FA600FB7119 /* LaunchScreen.xib in Resources */,
+				06CB33E31B117FA600FB7119 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06CB33E91B117FA600FB7119 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06CB33FD1B11802100FB7119 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06CB340B1B11802100FB7119 /* PowerMorpher WatchKit App.app in Resources */,
+				06CB34071B11802100FB7119 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06CB34081B11802100FB7119 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06CB34131B11802100FB7119 /* Interface.storyboard in Resources */,
+				06CB34151B11802100FB7119 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		06CB33CE1B117FA600FB7119 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06CB33DE1B117FA600FB7119 /* ViewController.m in Sources */,
+				06CB33DB1B117FA600FB7119 /* AppDelegate.m in Sources */,
+				06CB33D81B117FA600FB7119 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06CB33E71B117FA600FB7119 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06CB33F21B117FA600FB7119 /* PowerMorpherTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06CB33FB1B11802100FB7119 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06CB34051B11802100FB7119 /* InterfaceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		06CB33ED1B117FA600FB7119 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 06CB33D11B117FA600FB7119 /* PowerMorpher */;
+			targetProxy = 06CB33EC1B117FA600FB7119 /* PBXContainerItemProxy */;
+		};
+		06CB340D1B11802100FB7119 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 06CB34091B11802100FB7119 /* PowerMorpher WatchKit App */;
+			targetProxy = 06CB340C1B11802100FB7119 /* PBXContainerItemProxy */;
+		};
+		06CB34171B11802100FB7119 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 06CB33FE1B11802100FB7119 /* PowerMorpher WatchKit Extension */;
+			targetProxy = 06CB34161B11802100FB7119 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		06CB33DF1B117FA600FB7119 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06CB33E01B117FA600FB7119 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		06CB33E41B117FA600FB7119 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06CB33E51B117FA600FB7119 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		06CB34111B11802100FB7119 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06CB34121B11802100FB7119 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		06CB33F31B117FA600FB7119 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		06CB33F41B117FA600FB7119 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		06CB33F61B117FA600FB7119 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = PowerMorpher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		06CB33F71B117FA600FB7119 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = PowerMorpher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		06CB33F91B117FA600FB7119 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PowerMorpherTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PowerMorpher.app/PowerMorpher";
+			};
+			name = Debug;
+		};
+		06CB33FA1B117FA600FB7119 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PowerMorpherTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PowerMorpher.app/PowerMorpher";
+			};
+			name = Release;
+		};
+		06CB341A1B11802100FB7119 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = PowerMorpher_WatchKit_Extension;
+				INFOPLIST_FILE = "PowerMorpher WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		06CB341B1B11802100FB7119 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IBSC_MODULE = PowerMorpher_WatchKit_Extension;
+				INFOPLIST_FILE = "PowerMorpher WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		06CB341D1B11802100FB7119 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PowerMorpher WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		06CB341E1B11802100FB7119 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "PowerMorpher WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		06CB33CD1B117FA600FB7119 /* Build configuration list for PBXProject "PowerMorpher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06CB33F31B117FA600FB7119 /* Debug */,
+				06CB33F41B117FA600FB7119 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06CB33F51B117FA600FB7119 /* Build configuration list for PBXNativeTarget "PowerMorpher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06CB33F61B117FA600FB7119 /* Debug */,
+				06CB33F71B117FA600FB7119 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		06CB33F81B117FA600FB7119 /* Build configuration list for PBXNativeTarget "PowerMorpherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06CB33F91B117FA600FB7119 /* Debug */,
+				06CB33FA1B117FA600FB7119 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		06CB34191B11802100FB7119 /* Build configuration list for PBXNativeTarget "PowerMorpher WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06CB341A1B11802100FB7119 /* Debug */,
+				06CB341B1B11802100FB7119 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		06CB341C1B11802100FB7119 /* Build configuration list for PBXNativeTarget "PowerMorpher WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06CB341D1B11802100FB7119 /* Debug */,
+				06CB341E1B11802100FB7119 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 06CB33CA1B117FA600FB7119 /* Project object */;
+}
