@@ -158,11 +158,11 @@ ADInterstitialAd *iAdInterstitial;
         switch (result) {
             case SLComposeViewControllerResultDone:
                 NSLog(@"Done!!");
-                [NSTimer scheduledTimerWithTimeInterval:0.3f target:self selector:@selector(interstitalAdd:) userInfo:nil repeats:NO];
+                [self interstitalAdd];
                 break;
             case SLComposeViewControllerResultCancelled:
                 NSLog(@"Cancel!!");
-                [NSTimer scheduledTimerWithTimeInterval:0.3f target:self selector:@selector(interstitalAdd:) userInfo:nil repeats:NO];
+                [self interstitalAdd];
                 break;
         }
     }];
@@ -172,9 +172,11 @@ ADInterstitialAd *iAdInterstitial;
 
 #pragma -mark iAd
 
--(void)interstitalAdd:(NSTimer*)timer{
+-(void)interstitalAdd{
     if (iAdInterstitial.loaded) {
         [iAdInterstitial presentFromViewController:self];
+        
+//        [self requestInterstitialAdPresentation];
     }
 }
 
