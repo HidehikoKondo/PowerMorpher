@@ -8,20 +8,27 @@
 
 #import "ViewController.h"
 #import "AVFoundation/AVFoundation.h"
+#import <Social/Social.h>
 
-@interface ViewController ()
+@interface ViewController()
+
 @property (nonatomic, strong) UIImagePickerController *cameraView;
 
 @end
 
 @implementation ViewController
 bool isCameraOpen = false;
+UIImage *saveImage;
+ADInterstitialAd *iAdInterstitial;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
     isCameraOpen = false;
+    
+    [self loadiAdInterstitial];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,7 +46,7 @@ bool isCameraOpen = false;
     }else{
         [self heySiri:@"It's morphing time."];
         isCameraOpen = false;
-
+        
         //カメラが開いていたらシャッター
         [NSTimer scheduledTimerWithTimeInterval:2.0f //タイマーを発生させる間隔
                                          target:self //タイマー発生時に呼び出すメソッドがあるターゲット
@@ -61,21 +68,149 @@ bool isCameraOpen = false;
     utterance.voice =  JVoice;
     
     [speechSynthesizer speakUtterance:utterance];
-
+    
 }
 
 //カメラを開く
 -(void)openCamera{
-    self.cameraView = [[UIImagePickerController alloc] init];
-    self.cameraView.sourceType = UIImagePickerControllerSourceTypeCamera;
-    [self presentViewController:self.cameraView animated:YES completion:nil];
+    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+        self.cameraView = [[UIImagePickerController alloc] init];
+        self.cameraView.sourceType = UIImagePickerControllerSourceTypeCamera;
+        [self presentViewController:self.cameraView animated:YES completion:nil];
+        [self.cameraView setDelegate:self];
+    }else{
+        NSLog(@"カメラがないよ");
+    }
 }
 
 //シャッター
 -(void)shutter:(NSTimer*)timer{
     [self.cameraView takePicture];
-    
 }
 
+#pragma -mark カメラ制御
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    // オリジナル画像
+    UIImage *originalImage = (UIImage *)[info objectForKey:UIImagePickerControllerOriginalImage];
+    // 編集画像
+    UIImage *editedImage = (UIImage *)[info objectForKey:UIImagePickerControllerEditedImage];
+    
+    if(editedImage)
+    {
+        saveImage = editedImage;
+    }
+    else
+    {
+        saveImage = originalImage;
+    }
+    
+    
+    
+    // UIImageViewに画像を設定
+    //    self.pictureImage.image = saveImage;
+    
+    if(picker.sourceType == UIImagePickerControllerSourceTypeCamera)
+    {
+        // カメラから呼ばれた場合は画像をフォトライブラリに保存してViewControllerを閉じる
+        UIImageWriteToSavedPhotosAlbum(saveImage, nil, nil, nil);
+        [self dismissViewControllerAnimated:YES completion:^{
+            [self share:saveImage];
+        }];
+        
+        
+        
+    }
+    else
+    {
+        // フォトライブラリから呼ばれた場合はPopOverを閉じる（iPad）
+        //        [popover dismissPopoverAnimated:YES];
+        //        [popover release];
+        //        popover = nil;
+    }
+}
+
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    isCameraOpen = false;
+}
+
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)context
+{
+    if (error) {
+        // mistake
+    } else {
+        // success
+    }
+}
+
+-(void)share:(UIImage*)shareImage{
+    SLComposeViewController *facebookPostVC = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+    [facebookPostVC setInitialText:@"シェアだぁ！"];
+    [facebookPostVC addImage:shareImage];
+    [facebookPostVC addURL:[NSURL URLWithString:@"http://www.udonko.net"]];
+    
+    // 処理終了後に呼び出されるコールバックを指定する
+    [facebookPostVC setCompletionHandler:^(SLComposeViewControllerResult result) {
+        
+        switch (result) {
+            case SLComposeViewControllerResultDone:
+                NSLog(@"Done!!");
+                [NSTimer scheduledTimerWithTimeInterval:0.3f target:self selector:@selector(interstitalAdd:) userInfo:nil repeats:NO];
+                break;
+            case SLComposeViewControllerResultCancelled:
+                NSLog(@"Cancel!!");
+                [NSTimer scheduledTimerWithTimeInterval:0.3f target:self selector:@selector(interstitalAdd:) userInfo:nil repeats:NO];
+                break;
+        }
+    }];
+    [self presentViewController:facebookPostVC animated:YES completion:nil];
+
+}
+
+#pragma -mark iAd
+
+-(void)interstitalAdd:(NSTimer*)timer{
+    if (iAdInterstitial.loaded) {
+        [iAdInterstitial presentFromViewController:self];
+    }
+}
+
+// iAdインタースティシャル広告読み込み
+- (void)loadiAdInterstitial
+{
+    iAdInterstitial = [[ADInterstitialAd alloc] init];
+    iAdInterstitial.delegate = self;
+    self.interstitialPresentationPolicy = ADInterstitialPresentationPolicyManual;
+    [self requestInterstitialAdPresentation];
+}
+
+// iAdインタースティシャル広告がロードされた時に呼ばれる
+- (void)interstitialAdDidLoad:(ADInterstitialAd *)interstitialAd
+{
+    
+    NSLog(@"iAdロード完了");
+
+}
+
+// iAdインタースティシャル広告がアンロードされた時に呼ばれる
+- (void)interstitialAdDidUnload:(ADInterstitialAd *)interstitialAd
+{
+    iAdInterstitial = nil;
+}
+
+// iAdインタースティシャル広告の読み込み失敗時に呼ばれる
+- (void)interstitialAd:(ADInterstitialAd *)interstitialAd didFailWithError:(NSError *)error
+{
+    iAdInterstitial = nil;
+}
+
+// iAdインタースティシャル広告が閉じられた時に呼ばれる
+- (void)interstitialAdActionDidFinish:(ADInterstitialAd *)interstitialAd
+{
+    iAdInterstitial = nil;
+}
 
 @end

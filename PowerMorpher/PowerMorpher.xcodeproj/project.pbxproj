@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		068463FB1B13715200A5E3FE /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 068463FA1B13715200A5E3FE /* iAd.framework */; };
+		068463FD1B13783900A5E3FE /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 068463FC1B13783900A5E3FE /* Social.framework */; };
 		06CB33D81B117FA600FB7119 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB33D71B117FA600FB7119 /* main.m */; };
 		06CB33DB1B117FA600FB7119 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB33DA1B117FA600FB7119 /* AppDelegate.m */; };
 		06CB33DE1B117FA600FB7119 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB33DD1B117FA600FB7119 /* ViewController.m */; };
@@ -61,6 +63,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		068463FA1B13715200A5E3FE /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		068463FC1B13783900A5E3FE /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		06CB33D21B117FA600FB7119 /* PowerMorpher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PowerMorpher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06CB33D61B117FA600FB7119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06CB33D71B117FA600FB7119 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				068463FD1B13783900A5E3FE /* Social.framework in Frameworks */,
+				068463FB1B13715200A5E3FE /* iAd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +119,8 @@
 		06CB33C91B117FA600FB7119 = {
 			isa = PBXGroup;
 			children = (
+				068463FC1B13783900A5E3FE /* Social.framework */,
+				068463FA1B13715200A5E3FE /* iAd.framework */,
 				06CB33D41B117FA600FB7119 /* PowerMorpher */,
 				06CB33EE1B117FA600FB7119 /* PowerMorpherTests */,
 				06CB34001B11802100FB7119 /* PowerMorpher WatchKit Extension */,
@@ -659,6 +667,7 @@
 				06CB33F71B117FA600FB7119 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		06CB33F81B117FA600FB7119 /* Build configuration list for PBXNativeTarget "PowerMorpherTests" */ = {
 			isa = XCConfigurationList;
@@ -667,6 +676,7 @@
 				06CB33FA1B117FA600FB7119 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		06CB34191B11802100FB7119 /* Build configuration list for PBXNativeTarget "PowerMorpher WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -675,6 +685,7 @@
 				06CB341B1B11802100FB7119 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		06CB341C1B11802100FB7119 /* Build configuration list for PBXNativeTarget "PowerMorpher WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -683,6 +694,7 @@
 				06CB341E1B11802100FB7119 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

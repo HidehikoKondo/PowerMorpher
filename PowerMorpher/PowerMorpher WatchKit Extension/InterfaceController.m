@@ -25,6 +25,8 @@
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
+    
+        [self callParentApp];
 }
 
 - (void)didDeactivate {
@@ -32,6 +34,10 @@
     [super didDeactivate];
 }
 - (IBAction)letsMorphing {
+    [self callParentApp];
+}
+
+-(void)callParentApp {
     // NSDictionary生成　Key:"counterValue" Value（値）:counterString(counterカウント)
     NSDictionary *applicationData = @{@"FromWatchApp":[NSString stringWithFormat:@"It's Morphing Time!"]};
     
@@ -40,7 +46,6 @@
     [WKInterfaceController openParentApplication:applicationData reply:^(NSDictionary *replyInfo, NSError *error) {
         NSLog(@"%@",[replyInfo objectForKey:@"FromWatchApp"]);
     }];
-    
 }
 
 @end

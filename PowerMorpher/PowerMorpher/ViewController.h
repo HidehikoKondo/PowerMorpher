@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <iAd/iAd.h>
+
 
 @interface ViewController : UIViewController
+<UINavigationControllerDelegate,
+UIImagePickerControllerDelegate,
+ADInterstitialAdDelegate>
 -(void)voice;
 
 
