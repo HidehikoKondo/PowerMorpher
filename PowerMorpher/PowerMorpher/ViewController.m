@@ -29,6 +29,7 @@ ADInterstitialAd *iAdInterstitial;
     isCameraOpen = false;
     
     [self loadiAdInterstitial];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -147,6 +148,59 @@ ADInterstitialAd *iAdInterstitial;
 }
 
 -(void)share:(UIImage*)shareImage{
+    UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"Share your photo."
+                                                                message:@"Please Select SNS."
+                                                         preferredStyle:UIAlertControllerStyleActionSheet];
+
+    
+    // OK用のアクションを生成
+    UIAlertAction *fbAction =
+    [UIAlertAction actionWithTitle:@"Facebook"
+                             style:UIAlertActionStyleDefault
+                           handler:^(UIAlertAction *action) {
+                               // ボタンタップ時の処理
+                               [self facebook:shareImage];
+                           }];
+    
+    // Destructive用のアクションを生成
+    UIAlertAction *twAction =
+    [UIAlertAction actionWithTitle:@"Twitter"
+                             style:UIAlertActionStyleDefault
+                           handler:^(UIAlertAction *action) {
+                               // ボタンタップ時の処理
+                               [self twitter:shareImage];
+                           }];
+    
+    // Cancel用のアクションを生成
+    UIAlertAction *cancelAction =
+    [UIAlertAction actionWithTitle:@"Cancel"
+                             style: UIAlertActionStyleCancel
+                           handler:^(UIAlertAction *action) {
+                               // ボタンタップ時の処理
+                               [self interstitalAdd];
+                           }];
+    
+    // コントローラにアクションを追加
+    [ac addAction:twAction];
+    [ac addAction:fbAction];
+    [ac addAction:cancelAction];
+    
+//    // アクションシート表示処理
+//    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+//        
+//        CGRect frame = [[UIScreen mainScreen] applicationFrame];
+//        
+//        ac.popoverPresentationController.sourceView = self.view;
+//        ac.popoverPresentationController.sourceRect = CGRectMake(CGRectGetMidX(frame)-60,frame.size.height-50, 120,50);
+//        
+//    }
+    
+    [self presentViewController:ac animated:YES completion:nil];
+
+}
+
+-(void)facebook:(UIImage*)shareImage{
+    
     SLComposeViewController *facebookPostVC = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
     [facebookPostVC setInitialText:@"シェアだぁ！"];
     [facebookPostVC addImage:shareImage];
@@ -167,7 +221,33 @@ ADInterstitialAd *iAdInterstitial;
         }
     }];
     [self presentViewController:facebookPostVC animated:YES completion:nil];
+}
 
+
+-(void)twitter:(UIImage*)shareImage{
+        // Social Frameworkが使える
+        SLComposeViewController *twitterPostVC = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+        [twitterPostVC setInitialText:@"It's Morphing Time!!"];
+        [twitterPostVC addImage:shareImage];
+        [twitterPostVC addURL:[NSURL URLWithString:@"www.udonko.net"]];
+        
+        // 処理終了後に呼び出されるコールバックを指定する
+        [twitterPostVC setCompletionHandler:^(SLComposeViewControllerResult result) {
+            
+            switch (result) {
+                case SLComposeViewControllerResultDone:
+                    NSLog(@"Done!!");
+                    [self interstitalAdd];
+                    break;
+                case SLComposeViewControllerResultCancelled:
+                    NSLog(@"Cancel!!");
+                    [self interstitalAdd];
+                    break;
+            }
+        }];
+        
+        
+        [self presentViewController:twitterPostVC animated:YES completion:nil];
 }
 
 #pragma -mark iAd
