@@ -48,17 +48,25 @@
     NSString *str = [userInfo objectForKey:@"FromWatchApp"];
     NSLog(@"Recieve:%@",str);
     
-    //Viewcontrollerを取得して音声再生
+    //Viewcontrollerを取得
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     if (window == nil) {
         window = [[UIApplication sharedApplication].windows objectAtIndex:0];
     }
-    
     ViewController *viewController = window.rootViewController;
-    [viewController voice];
+
     
+    NSDictionary *applicationData;
+    if([str isEqualToString:@"CAMERABOOT"]){
+        //カメラ起動
+        [viewController cameraBoot];
+        applicationData = @{@"FromParentApp":@"CAMERAOPENED"};
+    }else if([str isEqualToString:@"CAMERASHUTTER"]){
+        //シャッター
+        [viewController shutter];
+        applicationData = @{@"FromParentApp":@"CAMERASHUTTER"};
+    }
     
-    NSDictionary *applicationData = @{@"FromWatchApp":[NSString stringWithFormat:@"fromApp%@",str]};
     reply(applicationData);
 }
 

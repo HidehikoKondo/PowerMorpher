@@ -17,7 +17,6 @@
 @end
 
 @implementation ViewController
-bool isCameraOpen = false;
 UIImage *saveImage;
 ADInterstitialAd *iAdInterstitial;
 
@@ -26,7 +25,6 @@ ADInterstitialAd *iAdInterstitial;
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    isCameraOpen = false;
     
     [self loadiAdInterstitial];
     
@@ -38,24 +36,26 @@ ADInterstitialAd *iAdInterstitial;
 }
 
 
--(void)voice{
-    if(!isCameraOpen){
-        [self heySiri:@"Get Ready."];
-        //カメラを開く
-        [self openCamera];
-        isCameraOpen = true;
-    }else{
-        [self heySiri:@"It's morphing time."];
-        isCameraOpen = false;
-        
-        //カメラが開いていたらシャッター
-        [NSTimer scheduledTimerWithTimeInterval:2.0f //タイマーを発生させる間隔
-                                         target:self //タイマー発生時に呼び出すメソッドがあるターゲット
-                                       selector:@selector(shutter:) //タイマー発生時に呼び出すメソッド
-                                       userInfo:nil //selectorに渡す情報(NSDictionary)
-                                        repeats:NO //リピート
-         ];
-    }
+
+-(void)cameraBoot{
+    NSLog(@"カメラ起動");
+    [self heySiri:@"Say morphing call."];
+
+    //カメラを開く
+    [self openCamera];
+}
+
+-(void)shutter{
+    NSLog(@"シャッター");
+    [self heySiri:@"It's morphing time."];
+    
+    //カメラが開いていたらシャッター
+    [NSTimer scheduledTimerWithTimeInterval:2.0f //タイマーを発生させる間隔
+                                     target:self //タイマー発生時に呼び出すメソッドがあるターゲット
+                                   selector:@selector(takePhoto:) //タイマー発生時に呼び出すメソッド
+                                   userInfo:nil //selectorに渡す情報(NSDictionary)
+                                    repeats:NO //リピート
+     ];
 }
 
 -(void)heySiri:(NSString*)message{
@@ -74,19 +74,26 @@ ADInterstitialAd *iAdInterstitial;
 
 //カメラを開く
 -(void)openCamera{
+    //retake時の処理（カメラが開いていたらcameraViewのインスタンスを作りなおさない）
+    if(self.cameraView){
+        return;
+    }
     if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
         self.cameraView = [[UIImagePickerController alloc] init];
+                [self.cameraView setDelegate:self];
         self.cameraView.sourceType = UIImagePickerControllerSourceTypeCamera;
+        self.cameraView.allowsEditing = NO;
         [self presentViewController:self.cameraView animated:YES completion:nil];
-        [self.cameraView setDelegate:self];
     }else{
         NSLog(@"カメラがないよ");
     }
 }
 
 //シャッター
--(void)shutter:(NSTimer*)timer{
+-(void)takePhoto:(NSTimer*)timer{
     [self.cameraView takePicture];
+    
+    NSLog(@"シャッター切ったよ");
 }
 
 #pragma -mark カメラ制御
@@ -135,13 +142,13 @@ ADInterstitialAd *iAdInterstitial;
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
     [picker dismissViewControllerAnimated:YES completion:nil];
-    isCameraOpen = false;
 }
 
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)context
 {
     if (error) {
         // mistake
+        NSLog(@"エラー");
     } else {
         // success
     }
@@ -151,7 +158,7 @@ ADInterstitialAd *iAdInterstitial;
     UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"Share your photo."
                                                                 message:@"Please Select SNS."
                                                          preferredStyle:UIAlertControllerStyleActionSheet];
-
+    
     
     // OK用のアクションを生成
     UIAlertAction *fbAction =
@@ -185,18 +192,18 @@ ADInterstitialAd *iAdInterstitial;
     [ac addAction:fbAction];
     [ac addAction:cancelAction];
     
-//    // アクションシート表示処理
-//    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-//        
-//        CGRect frame = [[UIScreen mainScreen] applicationFrame];
-//        
-//        ac.popoverPresentationController.sourceView = self.view;
-//        ac.popoverPresentationController.sourceRect = CGRectMake(CGRectGetMidX(frame)-60,frame.size.height-50, 120,50);
-//        
-//    }
+    //    // アクションシート表示処理
+    //    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+    //
+    //        CGRect frame = [[UIScreen mainScreen] applicationFrame];
+    //
+    //        ac.popoverPresentationController.sourceView = self.view;
+    //        ac.popoverPresentationController.sourceRect = CGRectMake(CGRectGetMidX(frame)-60,frame.size.height-50, 120,50);
+    //
+    //    }
     
     [self presentViewController:ac animated:YES completion:nil];
-
+    
 }
 
 -(void)facebook:(UIImage*)shareImage{
@@ -225,29 +232,29 @@ ADInterstitialAd *iAdInterstitial;
 
 
 -(void)twitter:(UIImage*)shareImage{
-        // Social Frameworkが使える
-        SLComposeViewController *twitterPostVC = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-        [twitterPostVC setInitialText:@"It's Morphing Time!!"];
-        [twitterPostVC addImage:shareImage];
-        [twitterPostVC addURL:[NSURL URLWithString:@"www.udonko.net"]];
+    // Social Frameworkが使える
+    SLComposeViewController *twitterPostVC = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+    [twitterPostVC setInitialText:@"It's Morphing Time!!"];
+    [twitterPostVC addImage:shareImage];
+    [twitterPostVC addURL:[NSURL URLWithString:@"www.udonko.net"]];
+    
+    // 処理終了後に呼び出されるコールバックを指定する
+    [twitterPostVC setCompletionHandler:^(SLComposeViewControllerResult result) {
         
-        // 処理終了後に呼び出されるコールバックを指定する
-        [twitterPostVC setCompletionHandler:^(SLComposeViewControllerResult result) {
-            
-            switch (result) {
-                case SLComposeViewControllerResultDone:
-                    NSLog(@"Done!!");
-                    [self interstitalAdd];
-                    break;
-                case SLComposeViewControllerResultCancelled:
-                    NSLog(@"Cancel!!");
-                    [self interstitalAdd];
-                    break;
-            }
-        }];
-        
-        
-        [self presentViewController:twitterPostVC animated:YES completion:nil];
+        switch (result) {
+            case SLComposeViewControllerResultDone:
+                NSLog(@"Done!!");
+                [self interstitalAdd];
+                break;
+            case SLComposeViewControllerResultCancelled:
+                NSLog(@"Cancel!!");
+                [self interstitalAdd];
+                break;
+        }
+    }];
+    
+    
+    [self presentViewController:twitterPostVC animated:YES completion:nil];
 }
 
 #pragma -mark iAd
@@ -256,7 +263,7 @@ ADInterstitialAd *iAdInterstitial;
     if (iAdInterstitial.loaded) {
         [iAdInterstitial presentFromViewController:self];
         
-//        [self requestInterstitialAdPresentation];
+        //        [self requestInterstitialAdPresentation];
     }
 }
 
@@ -274,7 +281,7 @@ ADInterstitialAd *iAdInterstitial;
 {
     
     NSLog(@"iAdロード完了");
-
+    
 }
 
 // iAdインタースティシャル広告がアンロードされた時に呼ばれる

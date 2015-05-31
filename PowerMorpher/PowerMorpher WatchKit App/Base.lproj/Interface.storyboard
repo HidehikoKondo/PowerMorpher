@@ -10,11 +10,12 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <button width="1" alignment="left" verticalAlignment="center" backgroundImage="crosschanger_after" id="5Xz-JJ-KMG">
+                        <button width="1" alignment="left" backgroundImage="crosschanger_after" id="5Xz-JJ-KMG">
                             <connections>
                                 <action selector="letsMorphing" destination="AgC-eL-Hgc" id="ABG-qD-3OR"/>
                             </connections>
                         </button>
+                        <label width="136" height="29" alignment="left" text="It's Morphing Time!" textAlignment="center" minimumScaleFactor="0.50000000000000011" id="HES-EM-8B3"/>
                     </items>
                 </controller>
             </objects>

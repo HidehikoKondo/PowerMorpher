@@ -14,7 +14,8 @@
 <UINavigationControllerDelegate,
 UIImagePickerControllerDelegate,
 ADInterstitialAdDelegate>
--(void)voice;
+-(void)cameraBoot;
+-(void)shutter;
 
 
 @end
