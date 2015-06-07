@@ -209,7 +209,7 @@ ADInterstitialAd *iAdInterstitial;
 -(void)facebook:(UIImage*)shareImage{
     
     SLComposeViewController *facebookPostVC = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-    [facebookPostVC setInitialText:@"シェアだぁ！"];
+    [facebookPostVC setInitialText:@"It's Morphing Time!! #MorphinCam"];
     [facebookPostVC addImage:shareImage];
     [facebookPostVC addURL:[NSURL URLWithString:@"http://www.udonko.net"]];
     
@@ -224,6 +224,7 @@ ADInterstitialAd *iAdInterstitial;
             case SLComposeViewControllerResultCancelled:
                 NSLog(@"Cancel!!");
                 [self interstitalAdd];
+                [self share:shareImage];
                 break;
         }
     }];
@@ -234,7 +235,7 @@ ADInterstitialAd *iAdInterstitial;
 -(void)twitter:(UIImage*)shareImage{
     // Social Frameworkが使える
     SLComposeViewController *twitterPostVC = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-    [twitterPostVC setInitialText:@"It's Morphing Time!!"];
+    [twitterPostVC setInitialText:@"It's Morphing Time!! #MorphinCam"];
     [twitterPostVC addImage:shareImage];
     [twitterPostVC addURL:[NSURL URLWithString:@"www.udonko.net"]];
     
@@ -249,6 +250,7 @@ ADInterstitialAd *iAdInterstitial;
             case SLComposeViewControllerResultCancelled:
                 NSLog(@"Cancel!!");
                 [self interstitalAdd];
+                [self share:shareImage];
                 break;
         }
     }];

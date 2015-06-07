@@ -16,27 +16,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CjG-8o-dGU">
-                                <rect key="frame" x="20" y="43" width="280" height="109"/>
-                                <string key="text">Step1.iPhoneをセット
-Step2.WatchAppを起動
-Step3.パワーモーファーをタッチで撮影
-Step4.変身ポーズを決めろ！
-Step5.写真をシェア！</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CjG-8o-dGU">
+                                <rect key="frame" x="10" y="30" width="300" height="215"/>
+                                <string key="text">  Step1.   Place the iPhone.
+
+  Step2.   Launch the watch App. 
+
+  Step3.  Say "It's morphin time!"
+
+  Step4.  Take a morphin pose photo.
+
+  Step5.  Share your photo.</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="2"/>
                             </label>
                             <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" adType="mediumRect" translatesAutoresizingMaskIntoConstraints="NO" id="NrD-sl-s1g">
-                                <rect key="frame" x="10" y="310" width="300" height="250"/>
+                                <rect key="frame" x="10" y="254" width="300" height="250"/>
                             </adBannerView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.7725490927696228" blue="1" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="288" y="222"/>
         </scene>
     </scenes>
 </document>

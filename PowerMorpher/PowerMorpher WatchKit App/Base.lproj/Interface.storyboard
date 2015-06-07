@@ -15,7 +15,7 @@
                                 <action selector="letsMorphing" destination="AgC-eL-Hgc" id="ABG-qD-3OR"/>
                             </connections>
                         </button>
-                        <label width="136" height="29" alignment="left" text="It's Morphing Time!" textAlignment="center" minimumScaleFactor="0.50000000000000011" id="HES-EM-8B3"/>
+                        <label width="136" height="29" alignment="left" text="Push to voice input" textAlignment="center" minimumScaleFactor="0.50000000000000011" id="HES-EM-8B3"/>
                     </items>
                 </controller>
             </objects>

@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PowerMorpher/ViewController.m"
-            timestampString = "454781936.859232"
+            timestampString = "455381184.464549"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "159"
@@ -96,6 +96,22 @@
             startingLineNumber = "77"
             endingLineNumber = "77"
             landmarkName = "-openCamera"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PowerMorpher/ViewController.m"
+            timestampString = "455381184.464549"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "212"
+            endingLineNumber = "212"
+            landmarkName = "-facebook:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
