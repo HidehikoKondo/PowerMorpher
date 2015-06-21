@@ -12,7 +12,6 @@
 
 @interface ViewController()
 
-@property (nonatomic, strong) UIImagePickerController *cameraView;
 
 @end
 
@@ -83,6 +82,8 @@ ADInterstitialAd *iAdInterstitial;
                 [self.cameraView setDelegate:self];
         self.cameraView.sourceType = UIImagePickerControllerSourceTypeCamera;
         self.cameraView.allowsEditing = NO;
+//        self.cameraView.showsCameraControls = YES;
+        self.cameraView.cameraDevice = UIImagePickerControllerCameraDeviceFront;
         [self presentViewController:self.cameraView animated:YES completion:nil];
     }else{
         NSLog(@"カメラがないよ");
@@ -142,6 +143,7 @@ ADInterstitialAd *iAdInterstitial;
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
     [picker dismissViewControllerAnimated:YES completion:nil];
+    _cameraView = nil;
 }
 
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)context

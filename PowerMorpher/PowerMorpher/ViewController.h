@@ -16,6 +16,7 @@ UIImagePickerControllerDelegate,
 ADInterstitialAdDelegate>
 -(void)cameraBoot;
 -(void)shutter;
+@property (nonatomic, strong) UIImagePickerController *cameraView;
 
 
 @end

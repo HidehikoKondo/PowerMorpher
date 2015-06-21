@@ -89,6 +89,9 @@
             //音声入力画面の起動
             [self callMorphingCode];
         }
+//        else if([(NSString*)[replyInfo objectForKey:@"FromParentApp"]isEqualToString:@"CAMERACLOSED"]){
+//        
+//        }
     }];
 }
 

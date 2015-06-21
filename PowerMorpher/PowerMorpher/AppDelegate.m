@@ -54,13 +54,18 @@
         window = [[UIApplication sharedApplication].windows objectAtIndex:0];
     }
     ViewController *viewController = window.rootViewController;
-
+    
     
     NSDictionary *applicationData;
     if([str isEqualToString:@"CAMERABOOT"]){
         //カメラ起動
         [viewController cameraBoot];
-        applicationData = @{@"FromParentApp":@"CAMERAOPENED"};
+        if(viewController.cameraView){
+            applicationData = @{@"FromParentApp":@"CAMERAOPENED"};
+        }
+//        else{
+//            applicationData = @{@"FromParentApp":@"CAMERACLOSED"};
+//        }
     }else if([str isEqualToString:@"CAMERASHUTTER"]){
         //シャッター
         [viewController shutter];
