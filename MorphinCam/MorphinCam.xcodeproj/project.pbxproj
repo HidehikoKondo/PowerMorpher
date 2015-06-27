@@ -1,0 +1,703 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		064C720C1B3EF9B000B20EA9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 064C720B1B3EF9B000B20EA9 /* main.m */; };
+		064C720F1B3EF9B000B20EA9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 064C720E1B3EF9B000B20EA9 /* AppDelegate.m */; };
+		064C72121B3EF9B000B20EA9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 064C72111B3EF9B000B20EA9 /* ViewController.m */; };
+		064C72151B3EF9B000B20EA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 064C72131B3EF9B000B20EA9 /* Main.storyboard */; };
+		064C72171B3EF9B000B20EA9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 064C72161B3EF9B000B20EA9 /* Images.xcassets */; };
+		064C721A1B3EF9B000B20EA9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 064C72181B3EF9B000B20EA9 /* LaunchScreen.xib */; };
+		064C72261B3EF9B000B20EA9 /* MorphinCamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 064C72251B3EF9B000B20EA9 /* MorphinCamTests.m */; };
+		064C723A1B3EFA1100B20EA9 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 064C72391B3EFA1100B20EA9 /* InterfaceController.m */; };
+		064C723D1B3EFA1100B20EA9 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 064C723C1B3EFA1100B20EA9 /* NotificationController.m */; };
+		064C723F1B3EFA1100B20EA9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 064C723E1B3EFA1100B20EA9 /* Images.xcassets */; };
+		064C72431B3EFA1100B20EA9 /* MorphinCam WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 064C72421B3EFA1100B20EA9 /* MorphinCam WatchKit App.app */; };
+		064C724B1B3EFA1100B20EA9 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 064C72491B3EFA1100B20EA9 /* Interface.storyboard */; };
+		064C724D1B3EFA1100B20EA9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 064C724C1B3EFA1100B20EA9 /* Images.xcassets */; };
+		064C72501B3EFA1100B20EA9 /* MorphinCam WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 064C72331B3EFA1100B20EA9 /* MorphinCam WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		064C72591B3EFA5100B20EA9 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 064C72581B3EFA5100B20EA9 /* iAd.framework */; };
+		064C725B1B3EFA5B00B20EA9 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 064C725A1B3EFA5B00B20EA9 /* Social.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		064C72201B3EF9B000B20EA9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 064C71FE1B3EF9B000B20EA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 064C72051B3EF9B000B20EA9;
+			remoteInfo = MorphinCam;
+		};
+		064C72441B3EFA1100B20EA9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 064C71FE1B3EF9B000B20EA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 064C72411B3EFA1100B20EA9;
+			remoteInfo = "MorphinCam WatchKit App";
+		};
+		064C724E1B3EFA1100B20EA9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 064C71FE1B3EF9B000B20EA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 064C72321B3EFA1100B20EA9;
+			remoteInfo = "MorphinCam WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		064C72571B3EFA1100B20EA9 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				064C72501B3EFA1100B20EA9 /* MorphinCam WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		064C72061B3EF9B000B20EA9 /* MorphinCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MorphinCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		064C720A1B3EF9B000B20EA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		064C720B1B3EF9B000B20EA9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		064C720D1B3EF9B000B20EA9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		064C720E1B3EF9B000B20EA9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		064C72101B3EF9B000B20EA9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		064C72111B3EF9B000B20EA9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		064C72141B3EF9B000B20EA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		064C72161B3EF9B000B20EA9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		064C72191B3EF9B000B20EA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		064C721F1B3EF9B000B20EA9 /* MorphinCamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MorphinCamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		064C72241B3EF9B000B20EA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		064C72251B3EF9B000B20EA9 /* MorphinCamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MorphinCamTests.m; sourceTree = "<group>"; };
+		064C72331B3EFA1100B20EA9 /* MorphinCam WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MorphinCam WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		064C72361B3EFA1100B20EA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		064C72371B3EFA1100B20EA9 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		064C72381B3EFA1100B20EA9 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		064C72391B3EFA1100B20EA9 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		064C723B1B3EFA1100B20EA9 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		064C723C1B3EFA1100B20EA9 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		064C723E1B3EFA1100B20EA9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		064C72421B3EFA1100B20EA9 /* MorphinCam WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MorphinCam WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		064C72481B3EFA1100B20EA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		064C724A1B3EFA1100B20EA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		064C724C1B3EFA1100B20EA9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		064C72581B3EFA5100B20EA9 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		064C725A1B3EFA5B00B20EA9 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		064C72031B3EF9B000B20EA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				064C725B1B3EFA5B00B20EA9 /* Social.framework in Frameworks */,
+				064C72591B3EFA5100B20EA9 /* iAd.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		064C721C1B3EF9B000B20EA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		064C72301B3EFA1100B20EA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		064C71FD1B3EF9B000B20EA9 = {
+			isa = PBXGroup;
+			children = (
+				064C725A1B3EFA5B00B20EA9 /* Social.framework */,
+				064C72581B3EFA5100B20EA9 /* iAd.framework */,
+				064C72081B3EF9B000B20EA9 /* MorphinCam */,
+				064C72221B3EF9B000B20EA9 /* MorphinCamTests */,
+				064C72341B3EFA1100B20EA9 /* MorphinCam WatchKit Extension */,
+				064C72461B3EFA1100B20EA9 /* MorphinCam WatchKit App */,
+				064C72071B3EF9B000B20EA9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		064C72071B3EF9B000B20EA9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				064C72061B3EF9B000B20EA9 /* MorphinCam.app */,
+				064C721F1B3EF9B000B20EA9 /* MorphinCamTests.xctest */,
+				064C72331B3EFA1100B20EA9 /* MorphinCam WatchKit Extension.appex */,
+				064C72421B3EFA1100B20EA9 /* MorphinCam WatchKit App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		064C72081B3EF9B000B20EA9 /* MorphinCam */ = {
+			isa = PBXGroup;
+			children = (
+				064C720D1B3EF9B000B20EA9 /* AppDelegate.h */,
+				064C720E1B3EF9B000B20EA9 /* AppDelegate.m */,
+				064C72101B3EF9B000B20EA9 /* ViewController.h */,
+				064C72111B3EF9B000B20EA9 /* ViewController.m */,
+				064C72131B3EF9B000B20EA9 /* Main.storyboard */,
+				064C72161B3EF9B000B20EA9 /* Images.xcassets */,
+				064C72181B3EF9B000B20EA9 /* LaunchScreen.xib */,
+				064C72091B3EF9B000B20EA9 /* Supporting Files */,
+			);
+			path = MorphinCam;
+			sourceTree = "<group>";
+		};
+		064C72091B3EF9B000B20EA9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				064C720A1B3EF9B000B20EA9 /* Info.plist */,
+				064C720B1B3EF9B000B20EA9 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		064C72221B3EF9B000B20EA9 /* MorphinCamTests */ = {
+			isa = PBXGroup;
+			children = (
+				064C72251B3EF9B000B20EA9 /* MorphinCamTests.m */,
+				064C72231B3EF9B000B20EA9 /* Supporting Files */,
+			);
+			path = MorphinCamTests;
+			sourceTree = "<group>";
+		};
+		064C72231B3EF9B000B20EA9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				064C72241B3EF9B000B20EA9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		064C72341B3EFA1100B20EA9 /* MorphinCam WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				064C72381B3EFA1100B20EA9 /* InterfaceController.h */,
+				064C72391B3EFA1100B20EA9 /* InterfaceController.m */,
+				064C723B1B3EFA1100B20EA9 /* NotificationController.h */,
+				064C723C1B3EFA1100B20EA9 /* NotificationController.m */,
+				064C723E1B3EFA1100B20EA9 /* Images.xcassets */,
+				064C72351B3EFA1100B20EA9 /* Supporting Files */,
+			);
+			path = "MorphinCam WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		064C72351B3EFA1100B20EA9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				064C72361B3EFA1100B20EA9 /* Info.plist */,
+				064C72371B3EFA1100B20EA9 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		064C72461B3EFA1100B20EA9 /* MorphinCam WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				064C72491B3EFA1100B20EA9 /* Interface.storyboard */,
+				064C724C1B3EFA1100B20EA9 /* Images.xcassets */,
+				064C72471B3EFA1100B20EA9 /* Supporting Files */,
+			);
+			path = "MorphinCam WatchKit App";
+			sourceTree = "<group>";
+		};
+		064C72471B3EFA1100B20EA9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				064C72481B3EFA1100B20EA9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		064C72051B3EF9B000B20EA9 /* MorphinCam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 064C72291B3EF9B000B20EA9 /* Build configuration list for PBXNativeTarget "MorphinCam" */;
+			buildPhases = (
+				064C72021B3EF9B000B20EA9 /* Sources */,
+				064C72031B3EF9B000B20EA9 /* Frameworks */,
+				064C72041B3EF9B000B20EA9 /* Resources */,
+				064C72571B3EFA1100B20EA9 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				064C724F1B3EFA1100B20EA9 /* PBXTargetDependency */,
+			);
+			name = MorphinCam;
+			productName = MorphinCam;
+			productReference = 064C72061B3EF9B000B20EA9 /* MorphinCam.app */;
+			productType = "com.apple.product-type.application";
+		};
+		064C721E1B3EF9B000B20EA9 /* MorphinCamTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 064C722C1B3EF9B000B20EA9 /* Build configuration list for PBXNativeTarget "MorphinCamTests" */;
+			buildPhases = (
+				064C721B1B3EF9B000B20EA9 /* Sources */,
+				064C721C1B3EF9B000B20EA9 /* Frameworks */,
+				064C721D1B3EF9B000B20EA9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				064C72211B3EF9B000B20EA9 /* PBXTargetDependency */,
+			);
+			name = MorphinCamTests;
+			productName = MorphinCamTests;
+			productReference = 064C721F1B3EF9B000B20EA9 /* MorphinCamTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		064C72321B3EFA1100B20EA9 /* MorphinCam WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 064C72541B3EFA1100B20EA9 /* Build configuration list for PBXNativeTarget "MorphinCam WatchKit Extension" */;
+			buildPhases = (
+				064C722F1B3EFA1100B20EA9 /* Sources */,
+				064C72301B3EFA1100B20EA9 /* Frameworks */,
+				064C72311B3EFA1100B20EA9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				064C72451B3EFA1100B20EA9 /* PBXTargetDependency */,
+			);
+			name = "MorphinCam WatchKit Extension";
+			productName = "MorphinCam WatchKit Extension";
+			productReference = 064C72331B3EFA1100B20EA9 /* MorphinCam WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		064C72411B3EFA1100B20EA9 /* MorphinCam WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 064C72511B3EFA1100B20EA9 /* Build configuration list for PBXNativeTarget "MorphinCam WatchKit App" */;
+			buildPhases = (
+				064C72401B3EFA1100B20EA9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MorphinCam WatchKit App";
+			productName = "MorphinCam WatchKit App";
+			productReference = 064C72421B3EFA1100B20EA9 /* MorphinCam WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		064C71FE1B3EF9B000B20EA9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = UDONKONET;
+				TargetAttributes = {
+					064C72051B3EF9B000B20EA9 = {
+						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 7JKB5AMAKP;
+					};
+					064C721E1B3EF9B000B20EA9 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 064C72051B3EF9B000B20EA9;
+					};
+					064C72321B3EFA1100B20EA9 = {
+						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 7JKB5AMAKP;
+					};
+					064C72411B3EFA1100B20EA9 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+				};
+			};
+			buildConfigurationList = 064C72011B3EF9B000B20EA9 /* Build configuration list for PBXProject "MorphinCam" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 064C71FD1B3EF9B000B20EA9;
+			productRefGroup = 064C72071B3EF9B000B20EA9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				064C72051B3EF9B000B20EA9 /* MorphinCam */,
+				064C721E1B3EF9B000B20EA9 /* MorphinCamTests */,
+				064C72321B3EFA1100B20EA9 /* MorphinCam WatchKit Extension */,
+				064C72411B3EFA1100B20EA9 /* MorphinCam WatchKit App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		064C72041B3EF9B000B20EA9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				064C72151B3EF9B000B20EA9 /* Main.storyboard in Resources */,
+				064C721A1B3EF9B000B20EA9 /* LaunchScreen.xib in Resources */,
+				064C72171B3EF9B000B20EA9 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		064C721D1B3EF9B000B20EA9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		064C72311B3EFA1100B20EA9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				064C72431B3EFA1100B20EA9 /* MorphinCam WatchKit App.app in Resources */,
+				064C723F1B3EFA1100B20EA9 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		064C72401B3EFA1100B20EA9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				064C724B1B3EFA1100B20EA9 /* Interface.storyboard in Resources */,
+				064C724D1B3EFA1100B20EA9 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		064C72021B3EF9B000B20EA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				064C72121B3EF9B000B20EA9 /* ViewController.m in Sources */,
+				064C720F1B3EF9B000B20EA9 /* AppDelegate.m in Sources */,
+				064C720C1B3EF9B000B20EA9 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		064C721B1B3EF9B000B20EA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				064C72261B3EF9B000B20EA9 /* MorphinCamTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		064C722F1B3EFA1100B20EA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				064C723D1B3EFA1100B20EA9 /* NotificationController.m in Sources */,
+				064C723A1B3EFA1100B20EA9 /* InterfaceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		064C72211B3EF9B000B20EA9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 064C72051B3EF9B000B20EA9 /* MorphinCam */;
+			targetProxy = 064C72201B3EF9B000B20EA9 /* PBXContainerItemProxy */;
+		};
+		064C72451B3EFA1100B20EA9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 064C72411B3EFA1100B20EA9 /* MorphinCam WatchKit App */;
+			targetProxy = 064C72441B3EFA1100B20EA9 /* PBXContainerItemProxy */;
+		};
+		064C724F1B3EFA1100B20EA9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 064C72321B3EFA1100B20EA9 /* MorphinCam WatchKit Extension */;
+			targetProxy = 064C724E1B3EFA1100B20EA9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		064C72131B3EF9B000B20EA9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				064C72141B3EF9B000B20EA9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		064C72181B3EF9B000B20EA9 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				064C72191B3EF9B000B20EA9 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		064C72491B3EFA1100B20EA9 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				064C724A1B3EFA1100B20EA9 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		064C72271B3EF9B000B20EA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		064C72281B3EF9B000B20EA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		064C722A1B3EF9B000B20EA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = MorphinCam/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		064C722B1B3EF9B000B20EA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = MorphinCam/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		064C722D1B3EF9B000B20EA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MorphinCamTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MorphinCam.app/MorphinCam";
+			};
+			name = Debug;
+		};
+		064C722E1B3EF9B000B20EA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MorphinCamTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MorphinCam.app/MorphinCam";
+			};
+			name = Release;
+		};
+		064C72521B3EFA1100B20EA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = MorphinCam_WatchKit_Extension;
+				INFOPLIST_FILE = "MorphinCam WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		064C72531B3EFA1100B20EA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = MorphinCam_WatchKit_Extension;
+				INFOPLIST_FILE = "MorphinCam WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		064C72551B3EFA1100B20EA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MorphinCam WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		064C72561B3EFA1100B20EA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "MorphinCam WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		064C72011B3EF9B000B20EA9 /* Build configuration list for PBXProject "MorphinCam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				064C72271B3EF9B000B20EA9 /* Debug */,
+				064C72281B3EF9B000B20EA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		064C72291B3EF9B000B20EA9 /* Build configuration list for PBXNativeTarget "MorphinCam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				064C722A1B3EF9B000B20EA9 /* Debug */,
+				064C722B1B3EF9B000B20EA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		064C722C1B3EF9B000B20EA9 /* Build configuration list for PBXNativeTarget "MorphinCamTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				064C722D1B3EF9B000B20EA9 /* Debug */,
+				064C722E1B3EF9B000B20EA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		064C72511B3EFA1100B20EA9 /* Build configuration list for PBXNativeTarget "MorphinCam WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				064C72521B3EFA1100B20EA9 /* Debug */,
+				064C72531B3EFA1100B20EA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		064C72541B3EFA1100B20EA9 /* Build configuration list for PBXNativeTarget "MorphinCam WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				064C72551B3EFA1100B20EA9 /* Debug */,
+				064C72561B3EFA1100B20EA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 064C71FE1B3EF9B000B20EA9 /* Project object */;
+}
