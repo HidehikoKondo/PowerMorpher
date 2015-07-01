@@ -11,6 +11,7 @@
 #import <Social/Social.h>
 
 @interface ViewController()
+@property (weak, nonatomic) IBOutlet ADBannerView *iAdView;
 
 
 @end
@@ -23,7 +24,12 @@ ADInterstitialAd *iAdInterstitial;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+
+    //4s以下は広告非表示
+    UIScreen *sc = [UIScreen mainScreen];
+    if(sc.bounds.size.height < 568){
+        [_iAdView setHidden:YES];
+    }
     
     [self loadiAdInterstitial];
     
@@ -211,7 +217,7 @@ ADInterstitialAd *iAdInterstitial;
 -(void)facebook:(UIImage*)shareImage{
     
     SLComposeViewController *facebookPostVC = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-    [facebookPostVC setInitialText:@"It's Morphing Time!! #MorphinCam"];
+    [facebookPostVC setInitialText:@"It's Morphing Time!! \n\nhttps://itunes.apple.com/jp/app/id1013469638\n\n#MorphinCam"];
     [facebookPostVC addImage:shareImage];
     [facebookPostVC addURL:[NSURL URLWithString:@"http://www.udonko.net"]];
     
@@ -237,7 +243,7 @@ ADInterstitialAd *iAdInterstitial;
 -(void)twitter:(UIImage*)shareImage{
     // Social Frameworkが使える
     SLComposeViewController *twitterPostVC = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-    [twitterPostVC setInitialText:@"It's Morphing Time!! #MorphinCam"];
+    [twitterPostVC setInitialText:@"It's Morphing Time!! \n\nhttps://itunes.apple.com/jp/app/id1013469638\n\n#MorphinCam"];
     [twitterPostVC addImage:shareImage];
     [twitterPostVC addURL:[NSURL URLWithString:@"www.udonko.net"]];
     
