@@ -500,7 +500,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "3ede92a3-82a2-4350-9bcd-933f39caa635";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -538,7 +538,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "3ede92a3-82a2-4350-9bcd-933f39caa635";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -552,7 +552,7 @@
 				INFOPLIST_FILE = MorphinCam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "3ede92a3-82a2-4350-9bcd-933f39caa635";
 			};
 			name = Debug;
 		};
@@ -564,7 +564,7 @@
 				INFOPLIST_FILE = MorphinCam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "3ede92a3-82a2-4350-9bcd-933f39caa635";
 			};
 			name = Release;
 		};
@@ -584,7 +584,7 @@
 				INFOPLIST_FILE = MorphinCamTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "3ede92a3-82a2-4350-9bcd-933f39caa635";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MorphinCam.app/MorphinCam";
 			};
 			name = Debug;
@@ -601,7 +601,7 @@
 				INFOPLIST_FILE = MorphinCamTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "3ede92a3-82a2-4350-9bcd-933f39caa635";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MorphinCam.app/MorphinCam";
 			};
 			name = Release;
@@ -620,7 +620,7 @@
 				INFOPLIST_FILE = "MorphinCam WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "de8a8779-29a9-49a3-b9a7-52b859a13507";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -637,7 +637,7 @@
 				INFOPLIST_FILE = "MorphinCam WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "de8a8779-29a9-49a3-b9a7-52b859a13507";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -656,7 +656,7 @@
 				INFOPLIST_FILE = "MorphinCam WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "b8ea32e7-9c38-4e80-9255-3ef5cb52fd5b";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -669,7 +669,7 @@
 				INFOPLIST_FILE = "MorphinCam WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "b8ea32e7-9c38-4e80-9255-3ef5cb52fd5b";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
