@@ -129,12 +129,12 @@ ADInterstitialAd *iAdInterstitial;
     {
         // カメラから呼ばれた場合は画像をフォトライブラリに保存してViewControllerを閉じる
         UIImageWriteToSavedPhotosAlbum(saveImage, nil, nil, nil);
-        [self dismissViewControllerAnimated:YES completion:^{
+        [picker dismissViewControllerAnimated:YES completion:^{
             [self share:saveImage];
         }];
         
-        
-        
+        self.cameraView = nil;
+        picker = nil;
     }
     else
     {
@@ -217,9 +217,9 @@ ADInterstitialAd *iAdInterstitial;
 -(void)facebook:(UIImage*)shareImage{
     
     SLComposeViewController *facebookPostVC = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-    [facebookPostVC setInitialText:@"It's Morphing Time!! \n\nhttps://itunes.apple.com/jp/app/id1013469638\n\n#MorphinCam"];
+    [facebookPostVC setInitialText:@"It's Morphing Time!!"];
     [facebookPostVC addImage:shareImage];
-    [facebookPostVC addURL:[NSURL URLWithString:@"http://www.udonko.net"]];
+    [facebookPostVC addURL:[NSURL URLWithString:@"https://itunes.apple.com/us/app/morphincam/id1013469638?l=ja&ls=1&mt=8"]];
     
     // 処理終了後に呼び出されるコールバックを指定する
     [facebookPostVC setCompletionHandler:^(SLComposeViewControllerResult result) {
@@ -243,7 +243,7 @@ ADInterstitialAd *iAdInterstitial;
 -(void)twitter:(UIImage*)shareImage{
     // Social Frameworkが使える
     SLComposeViewController *twitterPostVC = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-    [twitterPostVC setInitialText:@"It's Morphing Time!! \n\nhttps://itunes.apple.com/jp/app/id1013469638\n\n#MorphinCam"];
+    [twitterPostVC setInitialText:@"It's Morphing Time!! \n\nhttps://itunes.apple.com/us/app/morphincam/id1013469638?l=ja&ls=1&mt=8"];
     [twitterPostVC addImage:shareImage];
     [twitterPostVC addURL:[NSURL URLWithString:@"www.udonko.net"]];
     
