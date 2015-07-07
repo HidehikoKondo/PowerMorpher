@@ -10,7 +10,7 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <button width="1" alignment="left" backgroundImage="crosschanger_after" id="A4w-f5-nv4">
+                        <button width="1" alignment="left" backgroundImage="TechnoBrace" id="A4w-f5-nv4">
                             <connections>
                                 <action selector="letsMorphing" destination="AgC-eL-Hgc" id="QOi-pF-S4J"/>
                             </connections>
